@@ -1,0 +1,48 @@
+body{
+    background-color: #EAC926;
+    font-family: 'Roboto', sans-serif;
+}
+header{
+    font-size: 12px;
+    background-size: cover;
+    text-align: left;
+}
+#buscador{
+    display: block;
+    background-color: white;
+    color:  #666;
+}
+#compras{
+    margin: 20px;
+}
+.burger-menu{
+    background-color:  #03264C;
+    display: flex;
+    color:  #ebebeb;
+    align-items: center;
+    justify-content: center;
+    background-size: contain;
+}
+section{
+    font-size: 12px; 
+}
+.titulo{
+    font-size: 24px;
+}
+.precio{
+    font-size: 18px;
+}
+footer{
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+}
+footer i{
+    font-size: 2em; 
+    margin: 10px 0px;
+    color:  #1259c3;
+}
+#fin{
+    text-align: left
+}
