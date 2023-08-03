@@ -5,71 +5,118 @@
 }
 body{
     width: 100%;
-    background-color: #EAC926;
     font-family: 'Roboto', sans-serif;
 }
 /*Header**/
 header{
+    background-color: #EAC926;
     font-size: 12px;
-    background-size: cover;
-    text-align: left;
 }
+
+header img#logo{
+    width: 200px;
+}
+
+header div.header-top{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
 header a{
     text-decoration: none;
     color: rgb(18, 11, 76);;
 }
+
 #buscador{
-    background-color: white;
     color:  #666;
-    width: 150px;
+    width: 250px;
+    display: flex;
+    flex-wrap: wrap;
 }
+
 #compras{
     margin: 20px;
 }
 .burger-menu{
+    width: 30px;
     background-color:  #03264C;
     color:  #ebebeb;
-}
-/*Main**/
-main{
-    height: 100%;
-    width: 100%;
-    background-color: rgb(190, 188, 188);
+    padding: 5px;
     text-align: center;
     margin: auto;
+    border-radius: 10px;
 }
-main section{
-    width: 100%;
-    font-size: 12px;
-    padding: auto; 
+
+header nav{
+    display: none;
+}
+
+/* Main **/
+main{
+    width: 100vw;
+    background-color: rgb(190, 188, 188);
     display: flex;
+    flex-direction: column;
     align-items: center;
+}
+
+main section{
+    width: 90%;
+    font-size: 12px;
+    padding: 20px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main section article i{
+    display: block;
+    font-size: 16px;
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid #39b54a;
+    background-color: #FFF;
+    border-radius: 50%;
+    right: 20px;
+    top: -15px;
+   }
+
+main section div.article-list{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: center;
 }
+
 main article{
-    width: 100%;
+    max-width: 200px;
     margin: 10px;
     border: 1px solid rgb(63, 63, 63);
     border-radius: 20px;
     background-color: white;
     background-position: left;
 }
+
 main article img{
     width: 100%;
     border-radius: 20px;
 }
+
 article i{
     color: #39b54a;
     font-size: 2em; 
     margin: 10px 0px;
 }
+
 main.caja{
-    
     background-color: white;
     border-top: 1px solid #ebebeb;
     border-left: 15px;
     border-right: 15px;
 }
+
 .titulo{
     font-size: 24px;
 }
@@ -83,96 +130,90 @@ main.caja{
 .descripcion{
     font-size: 16px;
 }
+
 /*Footer**/
 footer{
-    align-items: center;
-    justify-content: center;
+    width: 100vw;
     text-align: center;
     background-color: white;
     margin: auto;
 }
+
+
+
 footer i{
     font-size: 2em; 
     margin: 10px 0px;
     color:  #1259c3;
 }
+
 #fin{
     text-align: left
 }
-/*Mobile**/
-@media (min-width: 0px){
-    body{
-        max-width: 360px;
-    }
-    img#buscador{
-        display: flex;
-        justify-content: center;
-    }
-    header img{
-        width: 50%;
-    }
-    #buscador{
-        display: inline-block;
-    }
-    header nav{
-       display: none;
-    }  
-    .burger-menu{
-        width: 40px;
-        height: 40px;
-        text-align: center;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-position: center;
-    }
+
+/* Formulario **/
+.form{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.cuerpo{
+    font-size: 18px;
+    width: 90vw;
+    padding: 50px;
+}
+
+main input{
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 3px solid transparent;
+    outline: none;
+    transition: border 2s;
+}
+
+input:focus{
+    border: 3px solid rgb(131, 150, 201);
+}
+
+main button{
+    color: white;
+    background-color: blue;
+    font-weight: 700;
+    border: 2px solid transparent;
+    padding: 5px;
+}
+
+
 /*Tablet**/
-@media (min-width: 361px){
-    body{
-        max-width: 768px;
-    }
-    header nav{
-        display: contents;
-     }  
+@media (min-width: 768px){
     .burger-menu{
         display: none;
     }  
-    main section article{
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-        width: 35%;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: center;
-        flex-direction: column;
-        align-self: flex-start;
+    header nav{
+        display:contents;
     }
-        
 }
 /*Desktop**/
-@media (min-width: 769px){
-    body{
-        max-width: 1380px;
-    }
+@media (min-width: 1020px){
     .burger-menu{
         display: none;
-    }  
-    main article{
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-        width: 35%;
+    } 
+    header nav{
+        display: contents;
+    }
+
+    #navegador{
+        width: 250px;
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
         flex-wrap: wrap;
-        justify-content: space-evenly;
-        align-items: center;
-        flex-direction: column;
-        align-self: flex-start;
-        
     }
-    
+    #cuenta{
+        width: 250px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 }
